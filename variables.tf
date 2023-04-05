@@ -8,21 +8,31 @@ variable "aws_region" {
   type        = string
   default     = null
 }
+
 variable "availability_zone" {
   description = "AZ to start the instance in"
   type        = string
   default     = null
 }
+
+variable "subnet_id" {
+  description = "VPC Subnet ID to launch in."
+  type        = string
+  default     = null
+}
+
 variable "aws_ami" {
   description = "ID of AMI to use for the instance"
   type        = string
   default     = null
 }
+
 variable "aws_instance_type" {
   description = "The type of instance to start"
   type        = string
   default     = null
 }
+
 variable "aws_key_name" {
   description = "Key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource"
   type        = string
@@ -56,6 +66,7 @@ variable "jmeter_cmdrunner_version" {
   default     = "2.2"
   type        = string
 }
+
 variable "jmeter_plugins_manager_version" {
   description = "The version of JMeter Plugins Manager to install"
   type        = string

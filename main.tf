@@ -1,16 +1,9 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 2.7.0"
-    }
-  }
-}
-resource "aws_instance" "this" {
+resource "aws_instance" "jmeter_instance" {
   availability_zone = var.availability_zone
   ami               = var.aws_ami
   instance_type     = var.aws_instance_type
   key_name          = var.aws_key_name
+  subnet_id         = var.subnet_id
   tags = {
     Name = "JMeter Server"
   }

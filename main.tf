@@ -1,6 +1,6 @@
 resource "aws_instance" "jmeter_instance" {
   availability_zone = var.availability_zone
-  ami               = var.aws_ami
+  ami               = var.aws_ami != null ? var.aws_ami : data.aws_ami.amzn_linux_x64_latest.id
   instance_type     = var.aws_instance_type
   key_name          = var.aws_key_name
   subnet_id         = var.subnet_id

@@ -42,7 +42,7 @@ To configure [outputs](outputs.tf), refer to the [documentation](https://registr
 
 ## Terraform Plan and Apply
 
-* Run `terraform init`
+* Run `terraform init` (or `terraform init --upgrade` to upgrade to the latest version of this module)
 * Run `terraform plan`
 * Run `terraform apply` when prompted to continue, enter `yes` to spin up the instance
 

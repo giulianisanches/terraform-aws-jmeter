@@ -21,12 +21,11 @@ This repo will help you to spin up an AWS EC2 instance with Java, JMeter, and JM
 ```terraform
 module "jmeter" {
   source  = "github.com/giulianisanches/terraform-aws-jmeter"
-  # insert the 6 required variables hereV
+  # insert the 4 required variables hereV
   aws_instance_type = "t2.small"
   aws_key_name      = "terraform"
   jmeter_version    = "5.4.3"
   availability_zone = "us-east-2a"
-  jmeter_plugins    = ["jpgc-casutg"]
 }
 ```
 

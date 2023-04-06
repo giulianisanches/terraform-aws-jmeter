@@ -1,7 +1,7 @@
 #!/bin/sh
-# JMETER_VERSION=${JMETER_VERSION} 
-# JMETER_DOWNLOAD_URL=${JMETER_DOWNLOAD_URL}
-# JMETER_HOME=${JMETER_HOME}
+
+[[ -n "$HTTP_PROXY" ]] && export http_proxy=$HTTP_PROXY
+[[ -n "$HTTPS_PROXY"]] && export https_proxy=$HTTPS_PROXY
 
 echo "Installing Java"
 

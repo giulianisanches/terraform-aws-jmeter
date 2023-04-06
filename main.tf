@@ -17,5 +17,7 @@ resource "aws_instance" "jmeter_instance" {
     JMETER_PLUGINS_MANAGER_VERSION      = var.jmeter_plugins_manager_version,
     JMETER_PLUGINS_MANAGER_DOWNLOAD_URL = "https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/${var.jmeter_plugins_manager_version}/jmeter-plugins-manager-${var.jmeter_plugins_manager_version}.jar",
     JMETER_PLUGINS                      = join(",", var.jmeter_plugins)
+    HTTP_PROXY                          = var.http_proxy
+    HTTPS_PROXY                         = var.https_proxy
   })
 }

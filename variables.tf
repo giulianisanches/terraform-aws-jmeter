@@ -68,3 +68,15 @@ variable "jmeter_plugins_manager_version" {
   type        = string
   default     = "1.7"
 }
+
+variable "http_proxy" {
+  description = "Define a http proxy to be used in the user data"
+  type        = string
+  default     = ""
+}
+
+variable "https_proxy" {
+  description = "Define a https proxy to be used in the user data"
+  type        = string
+  default     = ""
+}

@@ -55,10 +55,6 @@ variable "jmeter_plugins" {
   type        = list(string)
   description = "List of JMeter plugins to install"
   default     = []
-  validation {
-    condition     = length(var.jmeter_plugins) > 0
-    error_message = "You must specify at least one JMeter plugin."
-  }
 }
 
 variable "jmeter_cmdrunner_version" {

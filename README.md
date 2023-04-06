@@ -21,15 +21,12 @@ This repo will help you to spin up an AWS EC2 instance with Java, JMeter, and JM
 ```terraform
 module "jmeter" {
   source  = "github.com/giulianisanches/terraform-aws-jmeter"
-  # insert the 4 required variables hereV
   aws_instance_type = "t2.small"
   aws_key_name      = "terraform"
   jmeter_version    = "5.4.3"
-  availability_zone = "us-east-2a"
+  subnet_id         = "subnet-id-here-0df8d7f80asf7"
 }
 ```
-
-By default, it will spin up an `t2.micro` instance with `us-east-2` availability zone. Refer to the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-types.html) for more information.
 
 By default, we use the latest Amazon Linux AMI. You can pass an custom one with `aws_ami` parameter.
 
